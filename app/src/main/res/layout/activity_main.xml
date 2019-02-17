@@ -1,0 +1,66 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:orientation="vertical"
+    android:layout_height="match_parent"
+    tools:context=".MainActivity">
+
+   <LinearLayout
+       android:orientation="horizontal"
+       android:layout_width="match_parent"
+       android:layout_height="40dp">
+       <ImageView
+           android:id="@+id/saoMa"
+           android:src="@drawable/sys"
+           android:layout_width="40dp"
+           android:layout_height="40dp" />
+       <EditText
+           android:layout_marginLeft="10dp"
+           android:drawableLeft="@drawable/ss"
+           android:background="@drawable/bg_editext"
+           android:layout_width="match_parent"
+           android:layout_height="40dp" />
+   </LinearLayout>
+      <TextView
+          android:text="商品分类"
+          android:layout_width="wrap_content"
+          android:layout_height="wrap_content" 
+          android:layout_gravity="center"
+          android:textSize="20sp"
+          android:layout_marginTop="10dp"
+          />
+    <com.stx.xhb.xbanner.XBanner
+        android:id="@+id/banner"
+        app:AutoPlayTime="3000"
+        app:pointsVisibility="false"
+        android:layout_width="match_parent"
+        android:layout_height="100dp"></com.stx.xhb.xbanner.XBanner>
+    <LinearLayout
+        android:layout_marginTop="10dp"
+        android:orientation="horizontal"
+        android:layout_width="match_parent"
+        android:layout_height="40dp">
+        <TextView
+            android:text="公告:"
+            android:textSize="14sp"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content" />
+        <com.sunfusheng.marqueeview.MarqueeView
+            android:id="@+id/marqueeView"
+            android:layout_width="match_parent"
+            android:layout_height="40dp"
+            app:mvAnimDuration="1000"
+            app:mvDirection="bottom_to_top"
+            app:mvInterval="3000"
+            app:mvTextSize="16sp"
+            app:mvTextColor="#000"
+            android:layout_marginLeft="20dp"
+            app:mvSingleLine="true"/>
+    </LinearLayout>
+<com.jcodecraeer.xrecyclerview.XRecyclerView
+    android:id="@+id/recy"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"></com.jcodecraeer.xrecyclerview.XRecyclerView>
+</LinearLayout>
